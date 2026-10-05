@@ -10,7 +10,9 @@ BT=$SDK/build-tools/34.0.0
 # version CI se (env) ya default
 VC="${VERSION_CODE:-16}"
 VN="${VERSION_NAME:-3.0.2}"
-ROOT=~/workspace/lapakfree
+# Repo root = isi script ki directory (local VM ho ya GitHub runner, kahin bhi chale)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="${REPO_ROOT:-$SCRIPT_DIR}"
 SRC=$ROOT/app/src/main
 BUILD=/tmp/lfbuild
 OUT=$ROOT/apk
