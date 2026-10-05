@@ -1,6 +1,6 @@
 {
-  "versionCode": 21,
-  "versionName": "3.0.7",
+  "versionCode": 22,
+  "versionName": "3.0.8",
   "apkUrl": "https://raw.githubusercontent.com/arunagarhari14/Lapakfree/main/updates/lapakfree.apk",
-  "notes": "Rename notification channel and update titles"
+  "notes": "Update AI command prompt message for Route Guard"
 }
