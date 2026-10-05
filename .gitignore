@@ -1,0 +1,20 @@
+# build outputs (local / CI dono me dobara bante hain)
+apk/*.apk
+apk/*.idsig
+
+# auto-generated values (build time par bante hain)
+app/src/main/res/values/update.xml
+app/src/main/res/values/oauth.xml
+
+# local release zips
+*.zip
+
+# purana duplicate source
+apksrc/
+
+# python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
