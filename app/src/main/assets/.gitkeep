@@ -1,0 +1,1 @@
+# Keeps the app/src/main/assets folder so the offline map database (delhi_ncr.db) can be committed there.
