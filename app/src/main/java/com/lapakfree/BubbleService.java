@@ -106,13 +106,13 @@ public class BubbleService extends Service {
     }
 
     private void startFg() {
-        String ch = "lapakfree_bubble";
+        String ch = "routeguard_bubble";
         NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         if (Build.VERSION.SDK_INT >= 26) {
-            nm.createNotificationChannel(new NotificationChannel(ch, "Lapak Free", NotificationManager.IMPORTANCE_LOW));
+            nm.createNotificationChannel(new NotificationChannel(ch, "Route Guard", NotificationManager.IMPORTANCE_LOW));
         }
         Notification n = new Notification.Builder(this, ch)
-                .setContentTitle("Lapak Free chal raha hai")
+                .setContentTitle("Route Guard chal raha hai")
                 .setContentText("Bubble se ON/OFF karo")
                 .setSmallIcon(android.R.drawable.ic_dialog_info)
                 .build();
