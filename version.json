@@ -1,6 +1,6 @@
 {
-  "versionCode": 19,
-  "versionName": "3.0.5",
+  "versionCode": 20,
+  "versionName": "3.0.6",
   "apkUrl": "https://raw.githubusercontent.com/arunagarhari14/Lapakfree/main/updates/lapakfree.apk",
-  "notes": "Update strings.xml"
+  "notes": "Update activity_main.xml"
 }
