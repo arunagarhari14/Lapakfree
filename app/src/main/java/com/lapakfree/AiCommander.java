@@ -158,7 +158,7 @@ public class AiCommander {
 
     private static String buildPrompt(Context ctx, String message) {
         StringBuilder sb = new StringBuilder();
-        sb.append("Tum Lapak Free app ke AI commander ho — ek Indian taxi driver tumse Hinglish me baat karta hai. ");
+        sb.append("Tum Route Guard app ke AI commander ho — ek Indian taxi driver tumse Hinglish me baat karta hai. ");
         sb.append("Tumhe uski baat samajh ke sirf JSON me jawab dena hai, koi aur text nahi. ");
         sb.append("Actions: add_order (standing order banao), remove_order (index do), clear_orders, ");
         sb.append("list_orders, set_destination (destination field me jagah ka naam), reply (sirf jawab). ");
