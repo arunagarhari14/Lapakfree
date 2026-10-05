@@ -1,1 +1,6 @@
-{"apkUrl":"https://raw.githubusercontent.com/OWNER/lapakfree/main/updates/lapakfree.apk","notes":"pehla repo build — CI isko overwrite kar dega","versionCode":16,"versionName":"3.0.2"}
+{
+  "versionCode": 17,
+  "versionName": "3.0.3",
+  "apkUrl": "https://raw.githubusercontent.com/arunagarhari14/Lapakfree/main/updates/lapakfree.apk",
+  "notes": "Add files via upload"
+}
