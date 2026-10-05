@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lapak Free"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:gravity="center"
+        android:paddingTop="12dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ride auto-accept — bilkul free"
+        android:textSize="13sp"
+        android:textColor="@color/muted"
+        android:gravity="center"
+        android:paddingBottom="8dp" />
+
+    <!-- Pages -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- PAGE 1: Home — master switch + permissions -->
+        <ScrollView
+            android:id="@+id/pageHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/card"
+                    android:padding="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/statusText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OFF hai"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/red"
+                        android:layout_marginBottom="12dp" />
+
+                    <Button
+                        android:id="@+id/toggleBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:text="CHALU KARO"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/green"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/card"
+                    android:padding="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Permissions (ek baar set karo)"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/accessBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1. Accessibility"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/overlayBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2. Bubble Permission"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/batteryBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="3. Battery Optimization"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/locBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4. Location Permission"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/notifBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="5. Notification Access" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- PAGE 2: AI — login + instructions + commander -->
+        <ScrollView
+            android:id="@+id/pageAi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/card"
+                    android:padding="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Google Login — AI auto-connect"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/loginStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Login nahi hua — AI band rahega, rules se kaam chalega"
+                        android:textColor="@color/muted"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/googleLoginBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Google se Login karo"
+                        android:layout_marginBottom="8dp" />
+
+                    <CheckBox
+                        android:id="@+id/aiCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="AI se ride decide karwao (login ke baad, tez faisla)"
+                        android:checked="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/card"
+                    android:padding="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="AI ko apne nirdesh do"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jo likhoge AI har ride par wahi maanega. Jaise: Sirf 200 se upar wali ride lo. Raat 10 ke baad door ki ride mat lo."
+                        android:textColor="@color/muted"
+                        android:layout_marginBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/aiInstrInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minLines="3"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:hint="Apne nirdesh likho..."
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/saveInstrBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nirdesh Save Karo"
+                        android:backgroundTint="@color/green"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/instrStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Koi nirdesh nahi diye."
+                        android:textColor="@color/muted"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/commanderBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="AI Commander se Baat Karo 🎙"
+                        android:backgroundTint="@color/green"
+                        android:textColor="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/ordersStatusMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/muted"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- PAGE 3: History — date wise -->
+        <ScrollView
+            android:id="@+id/pageHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/card"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="History — date wise"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text" />
+
+                    <Button
+                        android:id="@+id/clearHistoryBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saaf karo" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/historyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Abhi koi ride nahi aayi."
+                    android:textColor="@color/muted"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- PAGE 4: Settings — alerts, rules, destination -->
+        <ScrollView
+            android:id="@+id/pageSettings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/card"
+                    android:padding="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Turant Ride Alerts — notification se"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ride ki notification aate hi turant card: kitne % pass/door jayegi. Bina screen khole, bina wait ke."
+                        android:textColor="@color/muted"
+                        android:layout_marginBottom="8dp" />
+
+                    <CheckBox
+                        android:id="@+id/notifAlertsCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Notification aate hi turant % card dikhao"
+                        android:checked="true"
+                        android:layout_marginBottom="8dp" />
+
+                    <CheckBox
+                        android:id="@+id/autoAcceptCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Auto-accept: itne % pass par turant accept kar do"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Auto-accept % (kitne % pass par accept ho)"
+                        android:textColor="@color/muted" />
+                    <EditText
+                        android:id="@+id/autoPctInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="30"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Manual mode me har ride par card aayega — % dekh ke ACCEPT/SKIP dabao."
+                        android:textColor="@color/muted"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/card"
+                    android:padding="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rules — kaisi ride accept hogi"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kam se kam fare (₹) — isse kam wali ride skip"
+                        android:textColor="@color/muted" />
+                    <EditText
+                        android:id="@+id/minFareInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="50"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pickup kitna door ho (km) — isse door wali skip"
+                        android:textColor="@color/muted" />
+                    <EditText
+                        android:id="@+id/maxPickupInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="5"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Kam se kam trip (km) — isse chhoti skip (0 = sab chalegi)"
+                        android:textColor="@color/muted" />
+                    <EditText
+                        android:id="@+id/minTripInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="0"
+                        android:layout_marginBottom="8dp" />
+
+                    <CheckBox
+                        android:id="@+id/unknownFareCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bina fare dikhe bhi accept karo"
+                        android:checked="true"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/saveRulesBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rules Save Karo"
+                        android:backgroundTint="@color/green"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/card"
+                    android:padding="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Destination mode — nazdeek pickup, manjil ki taraf drop"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tumhari manjil (jaise: Gurugram Sector 29)"
+                        android:textColor="@color/muted" />
+                    <EditText
+                        android:id="@+id/destInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Gurugram Sector 29"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/setDestBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Destination Set Karo"
+                        android:backgroundTint="@color/green"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/destStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Koi destination set nahi hai."
+                        android:textColor="@color/muted"
+                        android:layout_marginBottom="8dp" />
+
+                    <CheckBox
+                        android:id="@+id/destModeCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Destination mode ON karo"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Max pickup (km) — isse door ka pickup skip hoga"
+                        android:textColor="@color/muted" />
+                    <EditText
+                        android:id="@+id/destPickupInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:hint="2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/card"
+                    android:padding="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Support karta hai"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Uber Driver • Ola Driver • Rapido • Porter • inDrive"
+                        android:textColor="@color/muted" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Note: Driver app khuli ho aur aap online ho, tabhi ride detect hogi. Screen off ho tab bhi kaam karta hai."
+                    android:textColor="@color/muted"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="24dp" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <!-- Bottom navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/card"
+        android:padding="4dp">
+
+        <Button
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🏠 Home"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/navAi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🤖 AI"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/navHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📜 History"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/navSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="⚙ Settings"
+            android:textSize="13sp" />
+    </LinearLayout>
+</LinearLayout>

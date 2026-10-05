@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lapak Free</string>
+    <string name="accessibility_desc">Driver apps (Uber, Ola, Rapido, Porter, inDrive) me nayi ride aane par Lapak Free offer padhta hai, aapke rules check karta hai, aur rule me fit hone par Accept dabata hai.</string>
+</resources>
